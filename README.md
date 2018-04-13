@@ -1,4 +1,4 @@
-# ReactJS Resume Website Template
+# ReactJS Resume Portal
 ### <a href="https://payalcsureja.github.io/resume">LIVE DEMO</a>
 
 
