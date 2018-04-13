@@ -1,0 +1,139 @@
+{
+  "main": {
+    "name":"Payal Sureja",
+    "occupation":"Full Stack Web Developer",
+    "description":"Here will be your description. Use this to describe what you do or whatever you feel best describes yourself to a potential employer",
+    "image":"profilepic.png",
+    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "payalcsureja@gmail.com",
+    "phone": "+1 678-848-4344",
+    "address":{
+      "street":"168 Laurel Way, Apt#3A",
+      "city":"Herndon",
+      "state":"VA",
+      "zip": "20170"
+    },
+    "website": "https://payalcsureja.github.io/profile",
+    "resumedownload":"https://payalcsureja.github.io/profile/assets/miscellaneous/PayalSurejaFullStackWebDeveloperResume.pdf",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"http://facebook.com/payalcsureja",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"http://twitter.com",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"google-plus",
+        "url":"http://googleplus.com/payalcsureja",
+        "className":"fa fa-google-plus"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/payalsureja",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/payalcsureja",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"http://www.github.com/payalcsureja",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"skype",
+        "url":"http://skype.com",
+        "className":"fa fa-skype"
+      },
+      {
+        "name":"stackoverflow",
+        "url":"http://stackoverflow.com",
+        "className":"fa fa-stack-overflow"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"Nirma Institute of Technology - Gujarat University",
+        "degree":"Bachelors in Information Technology",
+        "graduated":"2002 - 2006",
+        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      }
+    ],
+    "work":[
+      {
+        "company":"XPAND Corporation",
+        "title":"Senior Software Engineer",
+        "years":"Mar 2013 – Present",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company":"Tailored Solutions",
+        "title":"LAMP Web Developer",
+        "years":"Aug 2006 – Mar 2013",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Git",
+        "level":"60%"
+      },
+      {
+        "name":"GIMP",
+        "level":"55%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"50%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"HTML5",
+        "level":"80%"
+      },
+      {
+        "name":"VueJs",
+        "level":"50%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Portfolio",
+        "category":"Portfolio is Angular2 application with node/express rest and mongodb/mLab as noSql db.",
+        "image":"portfolio.png",
+        "url":"https://payalcsureja.github.io/profile"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user":"Xyz - Role"
+      },
+      {
+        "text":"That Payal Sureja must be one of the most brilliant developers I've ever met!",
+        "user":"Abc - Role"
+      }
+    ]
+  }
+}
