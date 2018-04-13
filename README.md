@@ -38,3 +38,43 @@ When you're all done, run `npm start` again and you'll see your new personal res
 # ReactJS Resume Website Template
 ![ReactJS Resume Website Template](resume-screenshot.jpg?raw=true "ReactJS Resume Website Template")
 ### <a href="https://react-resume-template.herokuapp.com/">LIVE DEMO</a>
+
+<!--
+
+npm install gh-pages --save-dev
+
+rm -rf node_modules/gh-pages/.cache
+
+git remote add origin https://github.com/payalcsureja/resume.git
+#ssh
+git remote set-url origin git@github.com:payalcsureja/resume.git
+#token
+git remote set-url origin https://payalcsureja:<token>7@github.com/payalcsureja/resume .
+
+
+package.json
+"homepage": "https://payalcsureja.github.io/resume",
+
+"predeploy": "npm run build",
+"deploy": "npm run cleanup && gh-pages -d build",
+"cleanup": "rm -rf node_modules/gh-pages/.cache"
+
+    OR
+
+"predeployLive": "npm run build",
+"deployLive": "npm run cleanup && gh-pages -d build -b deploy -e build",
+"cleanup": "rm -rf node_modules/gh-pages/.cache"
+
+
+Open Git Bash.
+
+Set an email address in Git. You can use your GitHub-provided no-reply email address or any email address.
+
+git config --global user.email "email@example.com"
+Confirm that you have set the email address correctly in Git:
+
+git config --global user.email
+email@example.com
+
+
+-->
