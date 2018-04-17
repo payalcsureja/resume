@@ -40,41 +40,94 @@ When you're all done, run `npm start` again and you'll see your new personal res
 ### <a href="https://react-resume-template.herokuapp.com/">LIVE DEMO</a>
 
 <!--
+# To deply react app on git hub pages https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages
 
+1)
 npm install gh-pages --save-dev
 
-rm -rf node_modules/gh-pages/.cache
+2) changes to project package.json
 
-git remote add origin https://github.com/payalcsureja/resume.git
-#ssh
-git remote set-url origin git@github.com:payalcsureja/resume.git
-#token
-git remote set-url origin https://payalcsureja:<token>7@github.com/payalcsureja/resume .
+  - Add homepage to package.json
+    The step below is important!
+    If you skip it, your app will not deploy correctly.
 
+    Open your package.json and add a homepage field for your project:
 
-package.json
-"homepage": "https://payalcsureja.github.io/resume",
+    "homepage": "https://myusername.github.io/my-app",
+    or for a GitHub user page:
 
-"predeploy": "npm run build",
-"deploy": "npm run cleanup && gh-pages -d build",
-"cleanup": "rm -rf node_modules/gh-pages/.cache"
+    "homepage": "https://myusername.github.io",
+
+    Create React App uses the homepage field to determine the root URL in the built HTML file.
+
+        "homepage": "https://payalcsureja.github.io/resume",
+
+  - deply step with predeploy step to run build and cleanup cache. predeploy script will run automatically before deploy is run.
+
+    "deploy" : "npm run build && npm run cleanup && gh-pages -d build"
+    "cleanup": "rm -rf node_modules/gh-pages/.cache"
 
     OR
 
-"predeployLive": "npm run build",
-"deployLive": "npm run cleanup && gh-pages -d build -b deploy -e build",
-"cleanup": "rm -rf node_modules/gh-pages/.cache"
+    "predeploy": "npm run build",
+    "deploy": "npm run cleanup && gh-pages -d build",
+    "cleanup": "rm -rf node_modules/gh-pages/.cache"
 
+    OR for multiple builds
 
-Open Git Bash.
+    "predeployLive": "npm run build",
+    "deployLive": "npm run cleanup && gh-pages -d build -b deploy -e build",
+    "cleanup": "rm -rf node_modules/gh-pages/.cache"
 
-Set an email address in Git. You can use your GitHub-provided no-reply email address or any email address.
+    If you are deploying to a GitHub user page instead of a project page you'll need to make two additional modifications:
 
-git config --global user.email "email@example.com"
-Confirm that you have set the email address correctly in Git:
+    First, change your repository's source branch to be any branch other than master.
+    Additionally, tweak your package.json scripts to push deployments to master:
+    "scripts": {
+        "predeploy": "npm run build",
+    -   "deploy": "gh-pages -d build",
+    +   "deploy": "gh-pages -b master -d build",
 
-git config --global user.email
-email@example.com
+Note:
+1)cmd to clean cache if it fails and gives this secome time ProcessError: fatal: A branch named 'test-pages' already exists.
+rm -rf node_modules/gh-pages/.cache
+
+2) change got remote url to use either token or ssh authentication instead of username/password to use gh-pages deploy
+
+# https https://help.github.com/articles/about-remote-repositories/
+git remote add origin https://github.com/payalcsureja/resume.git
+#ssh https://help.github.com/articles/changing-a-remote-s-url/
+git remote set-url origin git@github.com:payalcsureja/resume.git
+#token Create a new Personal Access Token https://github.com/settings/tokens
+git remote set-url origin https://payalcsureja:<token>@github.com/payalcsureja/resume .
+
+Troubleshooting
+# "/dev/tty: No such a device or address"
+If, when deploying, you get /dev/tty: No such a device or address or a similar error, try the follwing:
+
+Create a new Personal Access Token
+git remote set-url origin https://<user>:<token>@github.com/<user>/<repo> .
+Try npm run deploy again
+
+# Filename too long in git for windows
+git config --system core.longpaths true
+
+edit .gitconfig and add
+
+[core]
+longpaths = true
+
+git clone -c core.longpaths=true <repo-url>
+
+#https://itnext.io/so-you-want-to-host-your-single-age-react-app-on-github-pages-a826ab01e48
+#for routhing and base url
+#index.js
+ReactDOM.render(<Router basename={process.env.PUBLIC_URL}>< App /></Router>, document.getElementById(‘root’));
+#App.js
+<Route exact path={`/`} render={ (routerProps) => < Home routerProps={routerProps} setUpGame={this.setUpGame} />} />
+# hard refresh and routing with liinking
+https://github.com/rafrex/spa-github-pages
+
 
 
 -->
